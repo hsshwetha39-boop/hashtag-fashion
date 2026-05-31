@@ -435,8 +435,8 @@ footer p{
     align-items:center;
     justify-content:center;
 
-    min-width:280px;
-    padding:18px 35px;
+    min-width:0;
+    padding:14px 20px;
 
     border:2px solid #ff5f95;
     border-radius:50px;
@@ -544,9 +544,9 @@ p{
 }
 
 .footer-btn i{
-    font-size:32px;
+    font-size:16px;
     color:#ff4f9a;
-    margin-right:15px;
+    margin-right:6px;
 }
 
 .footer-btn{
@@ -763,16 +763,18 @@ p{
 
     .section-heading h2{
         font-size:30px;
-        margin-top:-15px;
+        margin-top: 0;
     }
 
-    .heading-heart{
-        font-size:26px;
-    }
+.heading-heart{
+    font-size:24px;
+    margin-top:1px;
+}
 
-    .heading-line{
-        width:70px;
-    }
+.heading-line{
+    width:70px;
+    margin-top:1px;
+}
 
     /* Products */
 
@@ -916,15 +918,30 @@ p{
     flex-direction:row;
     justify-content:center;
     align-items:center;
-    gap:10px;
+    gap:8px;
+    padding:0 5px;
+    width:100%;
+    box-sizing:border-box;
 }
 
 .footer-btn{
-    width:48%;
+    width:47%;
     max-width:none;
     min-width:0;
-    font-size:13px;
-    padding:12px 8px;
+    font-size:11px;
+    padding:10px 8px;
+    gap:5px;
+    white-space:nowrap;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-sizing:border-box;
+}
+
+.footer-btn i{
+    font-size:13px !important;
+    flex-shrink:0;
+    margin:0;
 }
 
     .affiliate-text,
