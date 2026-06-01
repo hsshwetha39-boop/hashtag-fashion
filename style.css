@@ -703,7 +703,7 @@ footer {
 }
 
 .hero-overlay p {
-    font-size: 9px;
+    font-size: 8px;
     line-height: 1.4;
     max-width: 85%;
     margin-bottom: 8px;
@@ -727,7 +727,7 @@ footer {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    gap: 6px;
+    gap: 5px;
     padding: 0 10px;
     justify-content: flex-start;
     scrollbar-width: none;
