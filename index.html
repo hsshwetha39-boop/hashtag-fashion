@@ -47,23 +47,36 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h2>HASHTAG FASHION</h2>
-      <span class="heading-heart">──────── ♡ ────────</span>
-        
-     <p>
-     Curating elegant fashion finds, dreamy Pinterest-inspired looks, and aesthetic styles for the modern woman.
-    </p>
+  <section class="hero-banner">
+    <img src="hero banner 2.jpg" alt="Hashtag Fashion">
 
-      <a href="#products" class="btn">SHOP NOW</a>
+    <div class="hero-overlay">
+        <h1>HASHTAG FASHION</h1>
+        <p>
+            Discover elegant fashion finds, Pinterest-inspired styles,
+            and timeless wardrobe essentials carefully curated for
+            modern women who love effortless fashion.
+        </p>
+
+        <a href="#products" class="hero-btn">
+            SHOP NOW
+        </a>
+
+        <div class="hero-featured">
+    ✦ Trending • New Arrivals • Best Sellers ✦
+</div>
+
+        <div class="hero-categories">
+            <a href="#" onclick="showAllProducts()">All</a>
+            <a href="#" onclick="filterProducts('bags')">Bags</a>
+            <a href="#" onclick="filterProducts('western')">Western Wear</a>
+            <a href="#" onclick="filterProducts('heels')">Heels</a>
+            <a href="#" onclick="filterProducts('beauty')">Beauty</a>
+            <a href="#" onclick="filterProducts('accessories')">Accessories</a>
+        </div>
     </div>
-  </section>
-
-  <section class="hero-image">
-  <img src="banner ktfkgjhg.jpg" alt="Fashion Banner">
 </section>
+
 
   <!-- Products Section -->
   <section class="products" id="products">
@@ -82,7 +95,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
    rel="noopener noreferrer"
    class="product-link">
 
-  <div class="product-card">
+  <div class="product-card" data-category="western">
 
     <img src="amazon-pant.jpg" alt="Palazzo Pant" />
 
@@ -105,7 +118,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
    rel="noopener noreferrer"
    class="product-link">
 
-  <div class="product-card">
+  <div class="product-card" data-category="western">
 
     <img src="maxi-dress.jpg" alt="Kurti Set" />
 
@@ -116,6 +129,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </p>
 
     <button>Shop Now</button>
+
 
   </div>
 
@@ -128,7 +142,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
    rel="noopener noreferrer"
    class="product-link">
 
-  <div class="product-card">
+  <div class="product-card" data-category="western">
 
     <img src="kurti-set.jpg" alt="Floral Kurta Palazzo Set" />
 
@@ -151,7 +165,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
    rel="noopener noreferrer"
    class="product-link">
 
-  <div class="product-card">
+  <div class="product-card" data-category="bags">
 
     <img src="bag.jpg" alt="Handbag" />
 
@@ -162,6 +176,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </p>
 
     <button>Shop Now</button>
+
 
   </div>
 
@@ -174,7 +189,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
    rel="noopener noreferrer"
    class="product-link">
 
-  <div class="product-card">
+  <div class="product-card" data-category="western">
 
     <img src="wine-red-dress.jpg" alt="Burgundy Maxi Dress" />
 
@@ -197,7 +212,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
    rel="noopener noreferrer"
    class="product-link">
 
-  <div class="product-card">
+  <div class="product-card" data-category="western">
 
     <img src="cream-midi-dress.jpg" alt="Cream Midi Dress" />
 
@@ -220,7 +235,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
    rel="noopener noreferrer"
    class="product-link">
 
-  <div class="product-card">
+  <div class="product-card" data-category="western">
 
     <img src="brown-dress.jpg" alt="Brown Midi Dress" />
 
@@ -243,7 +258,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
    rel="noopener noreferrer"
    class="product-link">
 
-  <div class="product-card">
+  <div class="product-card" data-category="western">
 
     <img src="flower-dress.jpg" alt="Boho Floral Maxi Dress" />
 
@@ -341,7 +356,34 @@ We'd love to hear from you. Reach out anytime and we'll get back to you as soon 
 
 </footer>
 
+<script>
+function filterProducts(category){
 
+    const cards =
+    document.querySelectorAll('.product-card');
+
+    cards.forEach(card => {
+
+        if(
+            card.dataset.category === category
+        ){
+            card.parentElement.style.display = "block";
+        }
+        else{
+            card.parentElement.style.display = "none";
+        }
+
+    });
+
+    document
+    .getElementById('products')
+    .scrollIntoView({
+        behavior:'smooth'
+    });
+}
+</script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
