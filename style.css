@@ -769,8 +769,8 @@ footer {
 
 .product-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     width: 100%;
 }
 
@@ -780,18 +780,19 @@ footer {
 
 .product-card {
     width: 100%;
-    border-radius: 14px;
+    border-radius: 10px;
 }
 
 .product-card img {
   width: 100%;
-    aspect-ratio: 3/4;
-    object-fit: cover;
+  height: 140px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .product-card h3 {
-    font-size: 11px;
-    padding: 6px 8px 2px;
+    font-size: 9px;
+    padding: 4px 6px 2px;
     line-height: 1.2;
     margin: 0;
 
@@ -803,17 +804,17 @@ footer {
 }
 
 .product-card p {
-    font-size: 11px;
-    padding: 0 8px;
-    margin-bottom: 4px;
+    font-size: 9px;
+    padding: 0 6px;
+    margin-bottom: 3px;
     line-height: 1.2;
 }
 
 .product-card button {
-    margin: auto 8px 8px;
-    padding: 7px 12px;
-    font-size: 11px;
-    border-radius: 18px;
+    margin: auto 6px 6px;
+    padding: 5px 8px;
+    font-size: 9px;
+    border-radius: 14px;
 }
 
   /* Contact */
