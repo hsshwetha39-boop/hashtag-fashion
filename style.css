@@ -727,8 +727,8 @@ footer {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    gap: 5px;
-    padding: 0 10px;
+    gap: 4px;
+    padding: 0 8px;
     justify-content: flex-start;
     scrollbar-width: none;
 
@@ -744,7 +744,7 @@ footer {
     flex-shrink: 0;
     padding: 3px 8px;
     font-size: 7px;
-    border-radius: 18px;
+    border-radius: 16px;
 }
 
   /* Section heading */
